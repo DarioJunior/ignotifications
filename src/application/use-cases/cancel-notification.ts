@@ -23,6 +23,9 @@ export class CancelNotification {
       throw new NotificationNotFound()
     }
 
-    
+    notification.cancel()
+
+    await this.notificationsRepository.save(notification)
+
   }
 }

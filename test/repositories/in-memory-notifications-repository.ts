@@ -6,8 +6,16 @@ export class InMemoryNotificationsRepository
 {
   public notifications: Notification[] = [];
 
+  async findById(notificationId: string): Promise<Notification | null> {
+    throw new Error("Method not implemented.");
+  }
+  
   async create(notification: Notification) {
     console.log(notification);
     this.notifications.push(notification);
+  }
+
+  async save(notification: Notification): Promise<void> {
+    throw new Error("Method not implemented.");
   }
 }
